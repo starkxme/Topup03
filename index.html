@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/icons.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HJ Store</title>
+    <meta name="title" content="HJ Store" />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HJ Store | MOBILE LEGENDS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="form-group">
+      <div id="img-container">
+        <img src="img/banner2.jpg" alt="Example Image" />
+      </div>
+      <div class="d-flex mt-3">
+        <div style="display: flex; align-items: center">
+          <img
+            src="img/icons.png"
+            width="65"
+            height="65"
+            style="border-radius: 5px"
+          />
+          <h3 style="margin: 0px 0px 0px 10px" class="black">HJ Store</h3>
+        </div>
+        <div class="mx-2">
+          <div class="d-flex">
+            <div style="display: flex; align-items: center; gap: 10px">
+              <img src="images/Picture3.png" width="29" height="29" alt="" />
+              <p class="black" style="color: ">តម្លៃសមរម្យ</p>
+              <img src="img/Picture4.png" width="25" height="25" alt="" />
+              <p class="black mx-2">Mobile Legends</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="form-group">
+        <div class="input-group">
+          <div class="uuid">
+            <div class="input-header">
+              <h2>1.បញ្ចូលព័ត៍មាន</h2>
+            </div>
+            <div class="input-div">
+              <div class="id-server">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="userId"
+                  name="userId"
+                  placeholder="User ID"
+                />
+
+                <input
+                  type="number"
+                  class="form-control"
+                  id="serverId"
+                  name="serverId"
+                  placeholder="Server"
+                />
+              </div>
+
+              <div class="btnxmsg">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-checkid"
+                  onclick="checkApi()"
+                >
+                  CHECK ID
+                </button>
+                <div
+                  id="invalid-message"
+                  class="mt-3"
+                  style="
+                    text-align: center;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    font-size: medium;
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div id="qr-code"></div>
+    <br /><br />
+    <!-- <a href="#startPaymentButton"> -->
+    <div class="category">
+      <div></div>
+      <div class="choose-dias">
+        <h2>2.ជ្រើសរើសកញ្ចប់</h2>
+      </div>
+      <div></div>
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="Weekly Pass" data-price="1.60">
+          <div>
+            <p>Weekly Pass</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="Twilight Pass" data-price="8.30">
+          <div><p>Twilight Pass</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="86 Diamonds " data-price="1.30">
+          <div>
+            <p>86 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="172 Diamonds " data-price="2.70 ">
+          <div><p>172 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="257 Diamonds " data-price="4.50">
+          <div>
+            <p>257 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="344 Diamonds " data-price="5.00">
+          <div><p>344 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="429 Diamonds " data-price="6.50">
+          <div>
+            <p>429 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="514 Diamonds " data-price="7.50">
+          <div><p>514 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="600 Diamonds " data-price="8.80">
+          <div>
+            <p>600 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="706 Diamonds " data-price="10.50">
+          <div><p>706 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="792 Diamonds " data-price="11.50">
+          <div>
+            <p>792 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="878 Diamonds " data-price="13.00">
+          <div><p>878 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="963  Diamonds " data-price="14.00">
+          <div>
+            <p>963 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="1050 Diamonds " data-price="15.50">
+          <div><p>1050 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="1135  Diamonds " data-price="16.50">
+          <div>
+            <p>1135 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="1220 Diamonds " data-price="18.00">
+          <div><p>1220 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="1412  Diamonds " data-price="20.50">
+          <div>
+            <p>1412 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="1584 Diamonds " data-price="23.30">
+          <div><p>1584 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="1669  Diamonds " data-price="24.30">
+          <div>
+            <p>1669 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="1756 Diamonds " data-price="26.00">
+          <div><p>1756 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="1841  Diamonds " data-price="29.00">
+          <div>
+            <p>1841 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="2195 Diamonds " data-price="30.70">
+          <div><p>2195 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="2539  Diamonds " data-price="37.00">
+          <div>
+            <p>2539 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="2901 Diamonds " data-price="42.50">
+          <div><p>2901 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div class="package-box" data-item="3688  Diamonds " data-price="52.00">
+          <div>
+            <p>3688 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="5532 Diamonds " data-price="77.00">
+          <div><p>5532 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+      <!-- =============================================== -->
+      <div class="package-select">
+        <div
+          class="package-box"
+          data-item="7727  Diamonds "
+          data-price="108.00"
+        >
+          <div>
+            <p>7727 Diamonds</p>
+          </div>
+        </div>
+        <div class="package-box" data-item="9288 Diamonds " data-price="125.00">
+          <div><p>9288 Diamonds</p></div>
+        </div>
+      </div>
+      <!-- =================================================== -->
+    </div>
+    <!-- </a> -->
+    <br />
+    <br />
+
+    <div class="payment-section">
+      <h2>3.ការទូទាត់ប្រាក់</h2>
+      <div
+        class="khqrall"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <div class="khqr-section">
+          <div
+            for="khqrbtn"
+            ;
+            style="
+              width: 100%;
+              height: 70px;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                background-color: #e2232e;
+                width: 55px;
+                height: 50px;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img style="width: 45px" src="img/khqr-icon.svg" alt="" />
+            </div>
+            <div>
+              <div style="color: black">KHQR Pay</div>
+              <div style="color: black">Scan to pay with any banking app</div>
+            </div>
+            <div>
+              <h3 style="color: black; font-size: large" id="selectedInfo1">
+                0.00$
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        id="paymentinfo"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+        <h4 style="color: black">We Accept Payment</h4>
+        <img
+          style="width: 200px"
+          src="img/payment_icons-cd5e952dde3b886dea1fd1b983d43ce372f1692dec253808ec654096d2feb701-200h.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-inner">
+        <div></div>
+        <div class="scanx">
+          <div class="scankh">
+            <img src="img/khqr-icon.svg" alt="" style="margin-top: -40px" />
+            <a href="">How to use</a>
+          </div>
+
+          <div>
+            <p id="closeModal" style="margin-top: 0px; margin-bottom: 0px">x</p>
+            <br />
+          </div>
+        </div>
+        <!-- <div
+          id="timeout"
+          style="
+            width: 80%;
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <h2></h2>
+          <h1 id="time_cooldown" style="margin: 0px">00.00</h1>
+        </div> -->
+        <div class="div-img">
+          <div class="payment-method">
+            <div class="price-tag">
+              <div class="header">
+                <img src="img/khqr-icon.svg" alt="" style="margin: 0px 0px" />
+                <div class="corner"></div>
+              </div>
+
+              <div class="content">
+                <div class="text">
+                  <div class="text-inside">
+                    <div class="item-name">LuckyPayment</div>
+                    <div class="price">
+                      <span id="price"></span><span class="usd">USD</span>
+                    </div>
+                  </div>
+                  <div class="blank"></div>
+                </div>
+                <hr />
+                <div class="qr-code">
+                  <img src="qrimg/qr.PNG" alt="QR Code" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-upload">
+          <input type="file" id="uploadBtn" />
+          <label for="uploadBtn">Uplaod receipt 🧾</label>
+        </div>
+        <div class="modal-btn"></div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="fixed-content">
+      <div class="fixed-btn">
+        <div id="selectedInfo" style="font-weight: bold"></div>
+        <button
+          id="startPaymentButton"
+          class="btn btn-primary"
+          disabled=""
+          onclick="startPayment()"
+        >
+          PayNow
+        </button>
+      </div>
+    </div>
+
+    <br /><br />
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      createPaymentLink();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
