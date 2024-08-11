@@ -117,7 +117,7 @@ function openModal(userId, serverId, denom) {
   const telegramBotToken = "7258713725:AAEt9ZLjDuulGBRPso9WN-XIIdquP5QO0Ps";
   const telegramChatId = "-1002208050572"; // Replace with your group chat ID
 
-  const telegramMessage = `New Order 📥\n📅Date: ${dateString}\n================================\nUser ID: ${userId}\nServer ID: ${serverId}\n📦Item: ${denom}\n💵Price: ${selectedPrice}\n🎮Game: Mobile Legends: Bang Bang\n📝Order ID: HJ${Date.now()}\n📊Status: In Progress⌛️`;
+  const telegramMessage = `New Order 📥\n📅Date: ${dateString}\n============================\nUser ID: ${userId}\nServer ID: ${serverId}\n📦Item: ${denom}\n💵Price: ${selectedPrice}\n🎮Game: Mobile Legends: Bang Bang\n📝Order ID: HJ${Date.now()}\n📊Status: In Progress⌛️`;
   sendTelegramMessage(telegramBotToken, telegramChatId, telegramMessage);
   uploadFile();
 }
